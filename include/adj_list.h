@@ -5,29 +5,31 @@
 #include <vector>
 
 namespace org::kata {
-class adj_list {
-  using edge_list = std::vector<int>;
+class AdjList {
+  using EdgeList = std::vector<int>;
 
  private:
-  std::unordered_map<int, edge_list> nodes_;
+  std::unordered_map<int, EdgeList> nodes_;
 
  public:
-  adj_list() : nodes_() {}
-  ~adj_list();
+  AdjList() : nodes_() {}
+  ~AdjList();
 
-  int add_node() {
-    auto new_node = std::pair<int, edge_list>(nodes_.size(), edge_list());
+  int AddNode() {
+    auto new_node = std::pair<int, EdgeList>(nodes_.size(), EdgeList());
     nodes_.insert(new_node);
+    return nodes_.size();
   }
 
-  int add_edge(int i, int j) {
+  int AddEdge(int i, int j) {
     if (nodes_.find(i) == nodes_.end() || nodes_.find(j) == nodes_.end()) {
       return -1;
     }
     nodes_.at(i).push_back(j);
+    return nodes_.at(i).size();
   }
 
-  edge_list &outgoing(int i) {
+  EdgeList &outgoing(int i) {
     return nodes_.at(i);
   }
 

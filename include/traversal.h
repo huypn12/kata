@@ -1,4 +1,4 @@
-#include "adj_list.hpp"
+#include "adj_list.h"
 
 #include <vector>
 
