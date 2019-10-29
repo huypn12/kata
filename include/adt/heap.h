@@ -9,12 +9,5 @@ public:
   virtual void ExtractMin() = 0;
 };
 
-
-
-class PriorityQueueFactory {
-public:
-  std::shared_ptr<FibonacciHeap> CreateFibonacciHeap();
-  std::shared_ptr<BinaryHeap> CreateBinaryHeap();
-};
-
 } // namespace org::kata
+

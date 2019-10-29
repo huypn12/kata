@@ -1,6 +1,8 @@
-#include "priority_queue.h"
+#include "adt/heap.h"
 
-class FibonacciHeap : public PriorityQueue {
+namespace org::kata {
+
+template <typename Scalar> class FibonacciHeap : public PriorityQueue<Scalar> {
 private:
   std::vector<int> container_;
 
@@ -10,5 +12,4 @@ public:
   void ExtractMin() override;
 };
 
-void FibonacciHeap::Insert(int e) {}
-void FibonacciHeap::DecreaseKey(int e) {}
+} // namespace org::kata
