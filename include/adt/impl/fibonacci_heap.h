@@ -7,9 +7,14 @@ private:
   std::vector<int> container_;
 
 public:
+  FibonacciHeap<Scalar>();
   void Insert(int e) override;
   void DecreaseKey(int e) override;
   void ExtractMin() override;
 };
+
+template <typename Scalar> FibonacciHeap::FibonacciHeap<Scalar>() {
+
+}
 
 } // namespace org::kata
