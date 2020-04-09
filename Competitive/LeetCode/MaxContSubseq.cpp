@@ -23,4 +23,6 @@ int main() {
   auto s = Solution();
   auto testInput = std::vector<int>({-2,1,-3,4,-1,2,1,-5,4});
   std::cout << s.maxSubArray(testInput) << std::endl;
+  std::cout << sizeof(int) << std::endl;
+  std::cout << sizeof(long int) << std::endl;
 }
