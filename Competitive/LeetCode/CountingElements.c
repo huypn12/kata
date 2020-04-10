@@ -14,16 +14,18 @@ int countElements(int *arr, int arrSize) {
   }
 
   // second loop to check expected number
-  int sum = 0;
   for (int i = 0; i < arrSize; i++) {
     if (map[arr[i] + 1] >= 0) {
       map[arr[i]] += 1;
     }
   }
 
-
-  
-  
+  int sum = 0;
+  for (int i = 0; i < LIMIT; i++) {
+    if (map[i] > 0) {
+      sum += map[i];
+    }
+  }
   return sum;
 }
 

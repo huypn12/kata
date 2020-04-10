@@ -4,9 +4,11 @@
 #include <iostream>
 #include <sstream>
 #include <unordered_set>
+#include <unordered_map>
 #include <vector>
+#include <deque>
 
-template <typename T> void PrintVector(const std::vector<T> &V) {
+template<typename T> void PrintVector(const std::vector<T> &V) {
   std::ostringstream oss;
   oss << "[";
   for (auto i = 0; i < V.size(); ++i) {
@@ -17,6 +19,5 @@ template <typename T> void PrintVector(const std::vector<T> &V) {
     oss << V[i] << sep;
   }
   oss << "]";
-
   std::cout << oss.str() << std::endl;
 }
