@@ -46,9 +46,13 @@ int solution(int A[], int N, int K, int L) {
   return max_sum;
 }
 
-int main() {
-  int A[] = {6, 1, 4, 6, 3, 2, 7, 4};
-  printf("%d\n", solution(A, 8, 3, 2));
+int solution2(int A[], int N, int K, int L) {
+    
+}
 
-  return 0;
+int main() {
+    int A[] = {6, 1, 4, 6, 3, 2, 7, 4};
+    printf("%d\n", solution(A, 8, 3, 2));
+    
+    return 0;
 }
