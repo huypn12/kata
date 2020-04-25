@@ -1,9 +1,9 @@
-#include "stdafx.h"
+#include "stdafx.hpp"
 
 class Solution {
 public:
   bool isBlanagram(const std::string &s1, const std::string &s2) {
-    std::unordered_hash<int, int> hash;
+    std::unordered_map<int, int> hash;
   }
 };
 
