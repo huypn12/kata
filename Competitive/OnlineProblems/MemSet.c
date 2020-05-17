@@ -10,8 +10,6 @@ void *myMemSet(void *dst, int value, size_t len)
     return (dst);
 }
 
-void *myMalloc(size_t s) {}
-
 int main()
 {
     int *p = malloc(32 << 10);

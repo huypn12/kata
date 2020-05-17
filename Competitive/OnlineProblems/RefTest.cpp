@@ -1,4 +1,5 @@
-#include "stdafx.h"
+#include <iostream>
+#include <string>
 #include <vector>
 
 int foo(std::string &S, std::string &T)
