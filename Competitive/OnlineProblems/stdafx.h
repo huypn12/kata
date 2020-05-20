@@ -11,7 +11,7 @@
   My datastructure implementation
 */
 
-#define PrintArry(fmt, arr, n) \
+#define PrintArray(fmt, arr, n) \
     { \
         printf("[ "); \
         for (int i = 0; i < n; i++) { \

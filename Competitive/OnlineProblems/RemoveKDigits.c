@@ -3,6 +3,9 @@
     found in the internet has no proof of correctness.
 */
 
+
+char 
+
 char * removeKdigits(char * num, int k){
 
 }
