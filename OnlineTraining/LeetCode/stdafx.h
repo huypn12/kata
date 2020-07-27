@@ -1,6 +1,5 @@
 #pragma once
 
-//#include <math.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -17,4 +16,15 @@
         for (int i = 0; i < n; i++) { \
             printf("%##fmt", arr[i]); \
         } \
+        printf(" ]"); \
+    }
+
+#define PrintArray2D(fmt, arr, m, n) \
+    { \
+        printf("[\n"); \
+        for (int i = 0; i < m; i++) { \
+            printf("\t"); \
+            PrintArray(fmt, array[i]) \
+        } \
+        printf("]\n"); \
     }
