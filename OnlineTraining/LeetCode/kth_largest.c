@@ -4,12 +4,12 @@
     Optimal algorithm, kinda hard to implement
 */
 
-int split(int *A, int l, int r)
+int KSplit(int *A, int l, int r)
 {
 
 }
 
-int select(int *A, int l, int r, int k)
+int KSelect(int *A, int l, int r, int k)
 {
     if (l - r <= 10) {
         
@@ -17,10 +17,23 @@ int select(int *A, int l, int r, int k)
 
 }
 
+/*
+ * Quickselect algorithm, easier to implement
+*/
+int QSelect()
+
+
+/*
+ * Heap based algorithm
+*/
 
 int findKthLargest(int* nums, int numsSize, int k)
 {
-    return select(nums, 0, numsSize, k);
+#ifdef QSELECT
+    return QSelect(nums, 0, numsSize, k);
+#else
+    return KSelect(nums, 0, numsSize, k);
+#endif
 }
 
 void 

@@ -1,5 +1,4 @@
-
-#include "stdafx.h"
+#include "stdafx.hh"
 
 class Solution {
 public:
