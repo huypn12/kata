@@ -19,7 +19,6 @@ static inline bool isEqual(int *s, int *t, int len)
             return false;
         }
     }
-   
     return true;
 }
 

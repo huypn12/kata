@@ -7,9 +7,13 @@ for example, char
 #include <stdlib.h>
 #include <string.h>
 
-int* CountingSort(int *arr, int n, int k)
+/*
+ * TODO
+ */
+
+int* CountingSort(int *base, int count, int range)
 {
-  int *count = (int *) malloc(sizeof(int) * n);
+  int * = (int *) malloc(sizeof(int) * n);
   memset(arr, 0x0, n);
   for (int i = 0; i < n; i++) {
     count[arr[i]]++;
@@ -26,7 +30,7 @@ int* CountingSort(int *arr, int n, int k)
   }
 }
 
-int test()
+int Test()
 {
   
 }

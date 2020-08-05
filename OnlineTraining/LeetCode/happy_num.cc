@@ -1,4 +1,4 @@
-#include "stdafx.hpp"
+#include "stdafx.hh"
 
 class Solution {
 private:

@@ -43,14 +43,8 @@ int backspaceCompare(char *S, char *T)
     return 0;
 }
 
-int testBackward() {}
-
 int main()
 {
-    /*
-char S[] = "xywrrmp";
-char T[] = "xywrrmu#p";
-*/
     char S[] = "#a#c";
     char T[] = "a##c";
     printf("%d \n", backspaceCompare(S, T));
