@@ -47,7 +47,7 @@ int GetMaxSubArrayOptimized() {}
 
 int solution(int A[], int N, int K, int L)
 {
-    returnget GetMaxSubArray(A, N, K, L);
+    return GetMaxSubArray(A, N, K, L);
 }
 
 int main()

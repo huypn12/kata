@@ -10,17 +10,6 @@ typedef struct {
   struct TrieNode *head;
 } Trie;
 
-/** Initialize your data structure here. */
-
-Trie *trieCreate() {
-  Trie *new_trie = (Trie *)malloc(sizeof(Trie));
-  assert(new_trie != NULL);
-
-  new_trie->head = NULL;
-
-  return new_trie;
-}
-
 struct TrieNode *CreateTreeNode(int key) {
   struct TrieNode *new_trie_node =
       (struct TrieNode *) malloc(sizeof(struct TrieNode));
@@ -33,6 +22,15 @@ struct TrieNode *CreateTreeNode(int key) {
   return new_trie_node;
 }
 
+/** Initialize your data structure here. */
+Trie *trieCreate() {
+  Trie *new_trie = (Trie *)malloc(sizeof(Trie));
+  assert(new_trie != NULL);
+
+  new_trie->head = CreateTreeNode(-1);
+
+  return new_trie;
+}
 ssize_t __StrLen(char *s)
 {
   ssize_t len = 0;
@@ -46,14 +44,8 @@ ssize_t __StrLen(char *s)
 
 /** Inserts a word into the trie. */
 void trieInsert(Trie *obj, char *word) {
-  int w_len = __StrLen(word);
   struct TrieNode *itr = obj->head;
-  for (int i = 0; i < w_len + 1; i++) {
-    if (itr == NULL) {
-      struct TrieNode *new_trie_node = CreateTreeNode(word[i]);
-      obj->head = new_trie_node;
-      continue;
-    }
+  for (int i = 0; i < __StrLen(word) + 1; i++) {
     struct TrieNode *citr = itr->child;
     while (citr != NULL) {
       if (citr->key == word[i]) {
@@ -151,7 +143,6 @@ void trieFree(Trie *obj) {
 
 void Test_1() {
   Trie *obj = trieCreate();
-  trieInsert(obj, "abc");
   trieInsert(obj, "apple");
   int res = trieSearch(obj, "apple");   // returns true
   printf("%d\n", res);
