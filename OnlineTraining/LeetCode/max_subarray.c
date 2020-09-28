@@ -43,7 +43,13 @@ int GetMaxSubArray(int *A, int N, int K, int L)
     return max_sum;
 }
 
-int GetMaxSubArrayOptimized() {}
+int GetMaxSubArrayOptimized() {
+  // write your code in C99 (gcc 6.2.0)
+  if (K + L > N) {
+    return -1;
+  }
+  
+}
 
 int solution(int A[], int N, int K, int L)
 {
